@@ -47,19 +47,23 @@ def actions():
     story('story')
     cont = 1
     while True:
-        choices('action', cont)
-        typewriterPrint("\n- Qual a sua ação?", 6.0)
-        choice = input("> ").lower()
 
-        if choice in ['1', registro[0][0].lower(), registro[0].lower()]:
-            storyActions(f'action{cont}-', 1)
-            cont += 1
-        elif choice in ['2', registro[1][0].lower(), registro[1].lower()]:
-            storyActions(f'action{cont}-', 2)
-            cont += 1
-        elif choice != registro:
-            typewriterPrint("\nNão entendi, repita")
-            continue
+        if cont < 20:
+            choices('action', cont)
+            typewriterPrint("\n- Qual a sua ação?", 6.0)
+            choice = input("> ").lower()
+
+            if choice in ['1', registro[0][0].lower(), registro[0].lower()]:
+                storyActions(f'action{cont}-', 1)
+                cont += 1
+                continue
+            elif choice in ['2', registro[1][0].lower(), registro[1].lower()]:
+                storyActions(f'action{cont}-', 2)
+                cont += 1
+                continue
+            elif choice != registro:
+                typewriterPrint("\nNão entendi, repita")
+                continue
         else:
-            print("\nERROR3450")
-            continue
+            typewriterPrintTxtFile('creditos')
+            break
