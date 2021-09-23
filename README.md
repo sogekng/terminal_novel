@@ -3,7 +3,7 @@
         Terminal Novel
     </h1>
     <p>
-        <img src="https://img.shields.io/badge/terminal novel%20progress-yellow">
+        <img src="https://img.shields.io/badge/terminal%20novel-in%20progress-yellow">
     </p>
 </div>
 
