@@ -5,7 +5,7 @@ def choices(txt, cont):
     global registro
     nome = ""
     txt += str(cont)
-    with open('terminal_novel/txt/story', 'r', encoding='utf-8') as a:
+    with openEncodedTxtFile('story') as a:
         for linha in a:
             linha = linha.strip('\n')
             if nome == "":
@@ -19,7 +19,7 @@ def choices(txt, cont):
 def storyActions(txt, cont):
     nome = ""
     txt += str(cont)
-    with open('terminal_novel/txt/story', 'r', encoding='utf-8') as a:
+    with openEncodedTxtFile('story')  as a:
         for linha in a:
             linha = linha.strip('\n')
             if nome == "":
@@ -32,7 +32,7 @@ def storyActions(txt, cont):
 
 def story(txt):
     nome = ""
-    with open('terminal_novel/txt/story', 'r', encoding='utf-8') as a:
+    with openEncodedTxtFile('story')  as a:
         for linha in a:
             linha = linha.strip('\n')
             if nome == "":
